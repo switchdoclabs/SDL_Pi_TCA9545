@@ -55,7 +55,7 @@ class SDL_Pi_TCA9545():
     def _read(self ):
 
         returndata = self._bus.read_byte(self._addr)
-        print "addr = 0x%x returndata = 0x%x " % (self._addr, returndata)
+        #print "addr = 0x%x returndata = 0x%x " % (self._addr, returndata)
         return returndata
 
 
