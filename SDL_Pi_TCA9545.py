@@ -43,8 +43,8 @@ class SDL_Pi_TCA9545():
     def __init__(self, twi=1, addr=TCA9545_ADDRESS, bus_enable =  TCA9545_CONFIG_BUS0 ):
         self._bus = smbus.SMBus(twi)
         self._addr = addr
-	config = bus_enable
-  	self._write(TCA9545_REG_CONFIG, config)
+        config = bus_enable
+        self._write(TCA9545_REG_CONFIG, config)
 
 
     def _write(self, register, data):
@@ -63,15 +63,15 @@ class SDL_Pi_TCA9545():
     # public functions
 
     def read_control_register(self):
-	# Reads Control Register 
+	    # Reads Control Register 
 
-	value = self._read()
-	return value
+	    value = self._read()
+	    return value
 
     def write_control_register(self, config):
-	# Writes Control Register 
+	    # Writes Control Register 
 
-  	self._write(TCA9545_REG_CONFIG, config)
+  	    self._write(TCA9545_REG_CONFIG, config)
 
 
 
